@@ -1,5 +1,5 @@
 FROM google/cloud-sdk:alpine
-RUN apk --update add openjdk8-jre
+RUN apk --update add openjdk11-jre
 RUN gcloud components install --quiet beta cloud-firestore-emulator
 
 VOLUME /data 
