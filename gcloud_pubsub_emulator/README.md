@@ -6,7 +6,9 @@ This image provides a dockerized version of the *Google Cloud Pub/Sub Emulator*.
 
 ## Build
 
-Run it locally as part of [docker-dev](https://github.com/ONSdigital/ssdc-rm-docker-dev).  Build a new image by running:
+Run it locally as part of [docker-dev](https://github.com/ONSdigital/ssdc-rm-docker-dev).  
+
+Build a new image by running:
 
 ```sh
 docker build . -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/gcloud-pubsub-emulator:latest
