@@ -8,4 +8,4 @@ build_firestore_emulator:
 	docker build ./gcloud_firestore_emulator -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/gcloud-firestore-emulator:latest
 
 build_rh_modsecurity_rate_limiter:
-	docker build ./rh-modsecurity-rate-limiter -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/modsecurity:3.0.7-nginx
+	docker build ./rh-modsecurity-rate-limiter -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/modsecurity:latest
