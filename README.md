@@ -24,3 +24,11 @@ Build with
 ```shell
 make build_firestore_emulator
 ```
+
+## [RH ModSecurity Rate Limiter](/rh-modsecurity-rate-limiter/)
+The dockerfile used for the RH rate limiter based off the ModSecurity image.
+
+Build with
+```shell
+make build_rh_modsecurity_rate_limiter
+```
