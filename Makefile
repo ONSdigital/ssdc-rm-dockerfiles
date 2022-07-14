@@ -9,3 +9,6 @@ build_firestore_emulator:
 
 build_rh_modsecurity_rate_limiter:
 	docker build ./rh-modsecurity-rate-limiter -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/modsecurity:latest
+
+cloud_sdk_firebase_cli:
+	docker build ./cloud-sdk-firebase-cli -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloud-sdk-firebase-cli:latest

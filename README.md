@@ -32,3 +32,11 @@ Build with
 ```shell
 make build_rh_modsecurity_rate_limiter
 ```
+
+## [Cloud SDK Firebase CLI](/cloud_sdk_firebase_cli/)
+Adds the Firebase cli to the base cloud-sdk image used by the database wipe concourse task to enable Firestore to be wiped as part of it.
+
+Build with
+```shell
+make cloud_sdk_firebase_cli
+```
