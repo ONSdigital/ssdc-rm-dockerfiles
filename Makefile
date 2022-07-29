@@ -15,3 +15,5 @@ cloud_sdk_firebase_cli:
 
 tinyproxy:
 	docker build ./tinyproxy -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/tinyproxy:latest
+
+build_all: jdk17_maven_node_16 gcloud_pubsub_emulator gcloud_firestore_emulator rh_modsecurity_rate_limiter cloud_sdk_firebase_cli tinyproxy

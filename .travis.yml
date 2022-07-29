@@ -6,12 +6,7 @@ services:
 language: bash
 
 script:
-  - make jdk17_maven_node_16
-  - make gcloud_pubsub_emulator
-  - make gcloud_firestore_emulator
-  - make rh_modsecurity_rate_limiter
-  - make cloud_sdk_firebase_cli
-  - make tinyproxy
+  - make build_all
 
 branches:
   only:
