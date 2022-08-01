@@ -1,13 +1,9 @@
 sudo: required
-
+dist: bionic
 services:
   - docker
 
 language: bash
-
-before_install:
-  - sudo echo "DOCKER_OPTS=\"--dns 8.8.8.8\"" >> /etc/default/docker
-  - sudo service docker restart
 
 script:
   - curl example.com
