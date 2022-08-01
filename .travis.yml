@@ -5,6 +5,10 @@ services:
 
 language: bash
 
+before_install:
+  - sudo apt update -y
+  - sudo apt install --only-upgrade docker -y
+
 script:
   - make build_all
 
