@@ -6,6 +6,7 @@ services:
 language: bash
 
 script:
+  - curl https://archive.apache.org/dist/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
   - make build_all
 
 branches:
