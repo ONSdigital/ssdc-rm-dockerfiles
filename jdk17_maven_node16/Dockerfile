@@ -8,7 +8,6 @@ ARG MAVEN_URL=${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz
 
 RUN echo $MAVEN_URL
 
-RUN apt-get update -y && apt-get install --only-upgrade curl
 RUN curl example.com
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref
 RUN curl -fsSL -o /tmp/apache-maven.tar.gz ${MAVEN_URL}
