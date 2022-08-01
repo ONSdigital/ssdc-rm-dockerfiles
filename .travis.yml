@@ -6,7 +6,6 @@ services:
 language: bash
 
 script:
-  - curl example.com
   - make build_all
 
 branches:
