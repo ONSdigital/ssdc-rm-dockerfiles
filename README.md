@@ -6,7 +6,7 @@ A tooling image with JDK, Maven, and Node, to enable the building of JS front en
 
 Build with
 ```shell
-make build_jdk17_maven_node_16
+make jdk17_maven_node_16
 ```
 
 ## [GCloud PubSub Emulator](/gcloud_pubsub_emulator)
@@ -14,7 +14,7 @@ A dockerized version of the GCloud PubSub emulator tool, useful for local testin
 
 Build with
 ```shell
-make build_pubsub_emulator
+make gcloud_pubsub_emulator
 ```
 
 ## [GCloud Firestore Emulator](/gcloud_firestore_emulator)
@@ -22,7 +22,7 @@ A dockerized version of the GCloud Firestore emulator tool, useful for local tes
 
 Build with
 ```shell
-make build_firestore_emulator
+make gcloud_firestore_emulator
 ```
 
 ## [RH ModSecurity Rate Limiter](/rh-modsecurity-rate-limiter/)
@@ -30,7 +30,7 @@ The dockerfile used for the RH rate limiter based off the ModSecurity image.
 
 Build with
 ```shell
-make build_rh_modsecurity_rate_limiter
+make rh_modsecurity_rate_limiter
 ```
 
 ## [Cloud SDK Firebase CLI](/cloud_sdk_firebase_cli/)
@@ -39,4 +39,12 @@ Adds the Firebase cli to the base cloud-sdk image used by the database wipe conc
 Build with
 ```shell
 make cloud_sdk_firebase_cli
+```
+
+## [Tinyproxy](/tinyproxy/)
+A lightweight Alpine image with Tinyproxy installed and configured for our needs.
+
+Build with
+```shell
+make tinyproxy
 ```

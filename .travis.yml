@@ -1,0 +1,13 @@
+sudo: required
+dist: bionic
+services:
+  - docker
+
+language: bash
+
+script:
+  - make build_all
+
+branches:
+  only:
+    - main
