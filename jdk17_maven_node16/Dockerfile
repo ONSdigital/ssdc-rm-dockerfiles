@@ -17,7 +17,7 @@ FROM maven:3.8.6-eclipse-temurin-17
 #RUN rm -f /tmp/apache-maven.tar.gz
 #RUN ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs
+RUN apt-get -y update && apt-get install -y nodejs
 
 #ENV MAVEN_HOME /usr/share/maven
 #ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
