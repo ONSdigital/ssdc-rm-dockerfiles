@@ -1,9 +1,13 @@
 sudo: required
-dist: bionic
+#dist: bionic
 services:
   - docker
 
 language: bash
+
+#before_install:
+#   #Travis seems to be missing up to date keys
+#  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
 
 script:
   - make build_all
