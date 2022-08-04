@@ -9,7 +9,7 @@ A tooling image with JDK, Maven, and Node, to enable the building of JS front en
 Build with
 
 ```shell
-make jdk17_maven_node_16
+make jdk17-maven-node-16
 ```
 
 ## [GCloud PubSub Emulator](/gcloud-pubsub-emulator)
@@ -32,17 +32,19 @@ Build with
 make gcloud-firestore-emulator
 ```
 
-## [RH ModSecurity Rate Limiter](/rh-modsecurity-rate-limiter/)
+## [ModSecurity](/modsecurity)
 
-The dockerfile used for the RH rate limiter based off the ModSecurity image.
+A re-build of the [owasp/modsecurity](https://hub.docker.com/r/owasp/modsecurity) image to keep in our registry. 
+
+**Note:** The version in the [version file](/modsecurity/version) must be kept in step with the modsecurity base image version for our image tagging.
 
 Build with
 
 ```shell
-make rh-modsecurity-rate-limiter
+make modsecurity
 ```
 
-## [Cloud SDK Firebase CLI](/cloud-sdk-firebase-cli/)
+## [Cloud SDK Firebase CLI](/cloud-sdk-firebase-cli)
 
 Adds the Firebase cli to the base cloud-sdk image used by the database wipe concourse task to enable Firestore to be
 wiped as part of it.
@@ -53,7 +55,7 @@ Build with
 make cloud-sdk-firebase-cli
 ```
 
-## [Tinyproxy](/tinyproxy/)
+## [Tinyproxy](/tinyproxy)
 
 A lightweight Alpine image with Tinyproxy installed and configured for our needs.
 
@@ -63,7 +65,7 @@ Build with
 make tinyproxy
 ```
 
-## [CloudSQL Proxy](/cloudsql-proxy/)
+## [CloudSQL Proxy](/cloudsql-proxy)
 
 A lightweight google Cloud SQL proxy.
 
