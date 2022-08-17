@@ -1,19 +1,24 @@
-jdk17_maven_node_16:
-	docker build ./jdk17_maven_node16 -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/jdk17-mvn-node16-npm:latest
+.PHONY: jdk17-maven-node16 gcloud-firestore-emulator gcloud-pubsub-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy
 
-gcloud_pubsub_emulator:
-	docker build ./gcloud_pubsub_emulator -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/gcloud-pubsub-emulator:latest
+jdk17-maven-node16:
+	docker build ./jdk17-maven-node16 -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/jdk17-mvn-node16-npm:latest
 
-gcloud_firestore_emulator:
-	docker build ./gcloud_firestore_emulator -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/gcloud-firestore-emulator:latest
+gcloud-pubsub-emulator:
+	docker build ./gcloud-pubsub-emulator -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/gcloud-pubsub-emulator:latest
 
-rh_modsecurity_rate_limiter:
-	docker build ./rh-modsecurity-rate-limiter -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/modsecurity:latest
+gcloud-firestore-emulator:
+	docker build ./gcloud-firestore-emulator -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/gcloud-firestore-emulator:latest
 
-cloud_sdk_firebase_cli:
+modsecurity:
+	docker build ./modsecurity -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/modsecurity:latest
+
+cloud-sdk-firebase-cli:
 	docker build ./cloud-sdk-firebase-cli -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloud-sdk-firebase-cli:latest
 
 tinyproxy:
 	docker build ./tinyproxy -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/tinyproxy:latest
 
-build_all: jdk17_maven_node_16 gcloud_pubsub_emulator gcloud_firestore_emulator rh_modsecurity_rate_limiter cloud_sdk_firebase_cli tinyproxy
+cloudsql-proxy:
+	docker build ./cloudsql-proxy -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloudsql-proxy:latest
+
+build-all: jdk17-maven-node16 gcloud-pubsub-emulator gcloud-firestore-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy
