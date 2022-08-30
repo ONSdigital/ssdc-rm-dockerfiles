@@ -21,4 +21,7 @@ tinyproxy:
 cloudsql-proxy:
 	docker build ./cloudsql-proxy -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloudsql-proxy:latest
 
-build-all: jdk17-maven-node16 gcloud-pubsub-emulator gcloud-firestore-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy
+python-pipenv:
+	docker build ./python-pipenv -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/python-pipenv:latest
+
+build-all: jdk17-maven-node16 gcloud-pubsub-emulator gcloud-firestore-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy python-pipenv
