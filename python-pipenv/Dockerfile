@@ -1,4 +1,4 @@
-FROM python:3.10.4-alpine@sha256:54293681b8873556d38a4e6b04f52f4ac5c1d305ecf893a369892550d81b7c48
+FROM python:3.10.6-alpine@sha256:5b4e425e03038da758a35dc6f4473b4cf9bbadb9a7cdc2766d5d1d10ef1c9ca9
 RUN apk update
 RUN apk add build-base gcc
 RUN apk add libc-dev linux-headers libffi-dev libpq-dev
