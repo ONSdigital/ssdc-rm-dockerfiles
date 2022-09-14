@@ -14,6 +14,7 @@ RUN apt-get update && \
 RUN curl -L "https://github.com/tfutils/tfenv/archive/refs/tags/$TFENV_VERSION.tar.gz" -o "/home/cloudsdk/tfenv.tar.gz" && \
     mkdir "/home/cloudsdk/.tfenv" && \
     tar -xzf "/home/cloudsdk/tfenv.tar.gz" -C "/home/cloudsdk/.tfenv" --strip-components 1 && \
+    rm "/home/cloudsdk/tfenv.tar.gz" && \
     echo 'trust-tfenv: yes' > "/home/cloudsdk/.tfenv/use-gpgv"
 ENV PATH="/home/cloudsdk/.tfenv/bin:${PATH}"
 
