@@ -9,10 +9,10 @@ flush_requests = []
 
 @app.route('/flush', methods=['POST'])
 def flush():
-    token = request.data.get('token')
+    token = request.args['token']
     if not token:
         return Response(status=403)
-    flush_requests.append({'timestamp': datetime.datetime.utcnow(), 'token': token})
+    flush_requests.append({'timestamp': str(datetime.datetime.utcnow()), 'token': token})
     return Response(status=200)
 
 
