@@ -11,9 +11,9 @@ flush_requests = []
 def flush():
     token = request.args['token']
     if not token:
-        return Response(status=403)
+        return 'No token found in request', 403
     flush_requests.append({'timestamp': str(datetime.datetime.utcnow()), 'token': token})
-    return Response(status=200)
+    return 'Successful dummy flush', 200
 
 
 @app.route('/log/flush', methods=['GET'])
