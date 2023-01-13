@@ -9,7 +9,7 @@ flush_requests = []
 
 @app.route('/flush', methods=['POST'])
 def flush():
-    token = request.args['token']
+    token = request.args.get('token')
     if not token:
         return 'No token found in request', 403
     flush_requests.append({'timestamp': str(datetime.datetime.utcnow()), 'token': token})
@@ -17,7 +17,7 @@ def flush():
 
 
 @app.route('/log/flush', methods=['GET'])
-def get_flush():
+def get_flush_log():
     return json.dumps(flush_requests), 200
 
 
