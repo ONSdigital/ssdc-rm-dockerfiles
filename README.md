@@ -77,12 +77,27 @@ make cloudsql-proxy
 
 ## [Python Pipenv](/python-pipenv)
 
-A python image with pipenv and other build dependencies pre installed.
+This image is intended to be used as a base for our Python services and tools, having `pipenv` and other required build
+time dependencies such as `gcc` built in.
 
-Build with
+Currently, we maintain it for these python versions:
+
+- 3.10
+- 3.11
+
+To update the python base versions, update the relevant `python-3.x-tag.txt` file, ensuring you use the `slim` image and
+pin it to the SHA digest explicitly.
+
+Build the latest version with:
 
 ```shell
 make python-pipenv
+```
+
+Or build a specific version with `make python-pipenv-3.x`, e.g.:
+
+```shell
+make python-pipenv-3.10
 ```
 
 ## [Cloud SDK Terraform](/cloud-sdk-terraform)
