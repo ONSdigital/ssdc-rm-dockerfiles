@@ -24,10 +24,10 @@ cloudsql-proxy:
 python-pipenv: python-pipenv-3.11
 
 python-pipenv-3.11:
-	docker build --build-arg="PYTHON_TAG=$$(cat python-pipenv/python-3.11-tag.txt)" ./python-pipenv -t europe-west2-docker.pkg.dev/ons-ci-rm/docker/python-pipenv:latest
+	docker build --build-arg="PYTHON_TAG=$$(cat python-pipenv/python-3.11-tag.txt)" ./python-pipenv -t europe-west2-docker.pkg.dev/ons-ci-rm/docker/python-pipenv:3.11
 
 python-pipenv-3.10:
-	docker build --build-arg="PYTHON_TAG=$$(cat python-pipenv/python-3.10-tag.txt)" ./python-pipenv -t europe-west2-docker.pkg.dev/ons-ci-rm/docker/python-pipenv:latest
+	docker build --build-arg="PYTHON_TAG=$$(cat python-pipenv/python-3.10-tag.txt)" ./python-pipenv -t europe-west2-docker.pkg.dev/ons-ci-rm/docker/python-pipenv:3.10
 
 cloud-sdk-terraform:
 	docker build ./cloud-sdk-terraform -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloud-sdk-terraform:latest
