@@ -1,14 +1,7 @@
 version: 2
 updates:
-  - package-ecosystem: "maven"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    labels:
-      - "patch"
-      - "dependencies"
   - package-ecosystem: "pip"
-    directory: "/"
+    directory: "/eq-stub"
     schedule:
       interval: "daily"
     labels:
