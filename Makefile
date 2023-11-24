@@ -1,4 +1,4 @@
-.PHONY: jdk17-maven-node16 gcloud-firestore-emulator gcloud-pubsub-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy python-pipenv cloud-sdk-terraform eq-stub
+.PHONY: jdk17-maven-node16 gcloud-firestore-emulator gcloud-pubsub-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy python-pipenv cloud-sdk-terraform eq-stub owasp-venom
 
 jdk17-maven-node16:
 	docker build ./jdk17-maven-node16 -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/jdk17-mvn-node16-npm:latest
@@ -35,4 +35,7 @@ cloud-sdk-terraform:
 eq-stub:
 	docker build ./eq-stub -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/ssdc-rm-eq-stub:latest
 
-build-all: jdk17-maven-node16 gcloud-pubsub-emulator gcloud-firestore-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy python-pipenv-3.10 python-pipenv-3.11 cloud-sdk-terraform eq-stub
+owasp-venom:
+	docker build ./owasp-venom -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/venom:latest
+
+build-all: jdk17-maven-node16 gcloud-pubsub-emulator gcloud-firestore-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy python-pipenv-3.10 python-pipenv-3.11 cloud-sdk-terraform eq-stub owasp-venom
