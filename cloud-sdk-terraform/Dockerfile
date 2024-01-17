@@ -4,10 +4,9 @@ ARG TFENV_VERSION="v3.0.0"
 ARG TERRAFORM_INITIAL_VERSION="1.2.9"
 
 RUN apt-get update && \
-    apt-get install google-cloud-cli-gke-gcloud-auth-plugin &&  `# GKE plugin needed for authentication` \
+    apt-get install google-cloud-cli-gke-gcloud-auth-plugin kubectl &&  `# GKE plugin needed for authentication && kubectl` \
     apt-get install -y unzip &&                                 `# Tfenv depends on unzip` \
     rm -rf /var/lib/apt/lists/*                                 `# Remove package files to reduce image size bloat`
-    gcloud components install kubectl
 
 # Install tfenv from the github release tarball
 # Configure tfenv to use gpgv (which is included in the cloud-sdk) for verification
