@@ -1,7 +1,7 @@
 FROM google/cloud-sdk:slim
 
 ARG TFENV_VERSION="v3.0.0"
-ARG TERRAFORM_INITIAL_VERSION="1.2.9"
+ARG TERRAFORM_INITIAL_VERSION="1.7.2"
 
 RUN apt-get update && \
     apt-get install google-cloud-cli-gke-gcloud-auth-plugin &&  `# GKE plugin needed for authentication` \
