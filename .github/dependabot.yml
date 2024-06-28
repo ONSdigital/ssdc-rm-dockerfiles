@@ -1,8 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "pip"
-    directories:
-      - "/"
+    directory: "/eq-stb"
     target-branch: "main"
     groups:
       pip-security-updates:
