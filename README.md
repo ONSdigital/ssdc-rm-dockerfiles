@@ -4,12 +4,22 @@ This repo is where the rm team store their docker image files used in builds and
 
 ## [JDK 17 Maven Node 16](/jdk17-maven-node16)
 
-A tooling image with JDK, Maven, and Node, to enable the building of JS front end resources in Java backend services.
+A tooling image with JDK, Maven, and Node version 16, to enable the building of JS front end resources in Java backend services.
 
 Build with
 
 ```shell
-make jdk17-maven-node-16
+make jdk17-maven-node16
+```
+
+## [JDK 17 Maven Node 22](/jdk17-maven-node16)
+
+A tooling image with JDK, Maven, and Node version 22, to enable the building of JS front end resources in Java backend services.
+
+Build with
+
+```shell
+make jdk17-maven-node22
 ```
 
 ## [GCloud PubSub Emulator](/gcloud-pubsub-emulator)
