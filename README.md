@@ -12,7 +12,7 @@ Build with
 make jdk17-maven-node16
 ```
 
-## [JDK 17 Maven Node 22](/jdk17-maven-node16)
+## [JDK 17 Maven Node 22](/jdk17-maven-node22)
 
 A tooling image with JDK, Maven, and Node version 22, to enable the building of JS front end resources in Java backend services.
 
