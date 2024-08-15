@@ -94,6 +94,7 @@ Currently, we maintain it for these python versions:
 
 - 3.10
 - 3.11
+- 3.12
 
 To update the python base versions, update the relevant `python-3.x-tag.txt` file, ensuring you use the `slim` image and
 pin it to the SHA digest explicitly.
