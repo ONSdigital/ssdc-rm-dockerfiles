@@ -92,7 +92,6 @@ time dependencies such as `gcc` built in.
 
 Currently, we maintain it for these python versions:
 
-- 3.10
 - 3.11
 - 3.12
 
