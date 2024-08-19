@@ -24,13 +24,13 @@ tinyproxy:
 cloudsql-proxy:
 	docker build ./cloudsql-proxy -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloudsql-proxy:latest
 
-python-pipenv: python-pipenv-3.11
+python-pipenv: python-pipenv-3.12
+
+python-pipenv-3.12:
+	docker build --build-arg="PYTHON_TAG=$$(cat python-pipenv/python-3.12-tag.txt)" ./python-pipenv -t europe-west2-docker.pkg.dev/ons-ci-rm/docker/python-pipenv:3.12
 
 python-pipenv-3.11:
 	docker build --build-arg="PYTHON_TAG=$$(cat python-pipenv/python-3.11-tag.txt)" ./python-pipenv -t europe-west2-docker.pkg.dev/ons-ci-rm/docker/python-pipenv:3.11
-
-python-pipenv-3.10:
-	docker build --build-arg="PYTHON_TAG=$$(cat python-pipenv/python-3.10-tag.txt)" ./python-pipenv -t europe-west2-docker.pkg.dev/ons-ci-rm/docker/python-pipenv:3.10
 
 cloud-sdk-terraform:
 	docker build ./cloud-sdk-terraform -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloud-sdk-terraform:latest
@@ -41,4 +41,4 @@ eq-stub:
 owasp-venom:
 	docker build ./owasp-venom -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/venom:latest
 
-build-all: jdk17-maven-node16 gcloud-pubsub-emulator gcloud-firestore-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy python-pipenv-3.10 python-pipenv-3.11 cloud-sdk-terraform eq-stub owasp-venom
+build-all: jdk17-maven-node16 gcloud-pubsub-emulator gcloud-firestore-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy python-pipenv-3.11 python-pipenv-3.12 cloud-sdk-terraform eq-stub owasp-venom
