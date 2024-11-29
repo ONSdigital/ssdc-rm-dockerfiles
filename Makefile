@@ -1,8 +1,5 @@
 .PHONY: jdk17-maven-node16 jdk17-maven-node22 gcloud-firestore-emulator gcloud-pubsub-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy python-pipenv cloud-sdk-terraform eq-stub owasp-venom
 
-jdk17-maven-node16:
-	docker build ./jdk17-maven-node16 -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/jdk17-mvn-node16-npm:latest
-
 jdk17-maven-node22:
 	docker build ./jdk17-maven-node22 -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/jdk17-mvn-node22-npm:latest
 
