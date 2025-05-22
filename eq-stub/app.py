@@ -12,7 +12,7 @@ def flush():
     token = request.args.get('token')
     if not token:
         return 'No token found in request', 403
-    flush_requests.append({'timestamp': str(datetime.now(timezone.utc)),
+    flush_requests.append({'timestamp': str(datetime.now(timezone.utc).replace(tzinfo=None)),
                            'token': token})
     return 'Successful dummy flush', 200
 
