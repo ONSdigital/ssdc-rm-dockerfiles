@@ -1,6 +1,6 @@
-import datetime
 import json
-from flask import Flask, Response, request
+from datetime import datetime, timezone
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -12,7 +12,8 @@ def flush():
     token = request.args.get('token')
     if not token:
         return 'No token found in request', 403
-    flush_requests.append({'timestamp': str(datetime.datetime.utcnow()), 'token': token})
+    flush_requests.append({'timestamp': str(datetime.now(timezone.utc).replace(tzinfo=None)),
+                           'token': token})
     return 'Successful dummy flush', 200
 
 
