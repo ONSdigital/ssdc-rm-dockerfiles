@@ -23,6 +23,9 @@ cloudsql-proxy:
 
 python-pipenv: python-pipenv-3.12
 
+python-pipenv-3.13:
+	docker build --build-arg="PYTHON_TAG=$$(cat python-pipenv/python-3.13-tag.txt)" ./python-pipenv -t europe-west2-docker.pkg.dev/ons-ci-rm/docker/python-pipenv:3.13
+
 python-pipenv-3.12:
 	docker build --build-arg="PYTHON_TAG=$$(cat python-pipenv/python-3.12-tag.txt)" ./python-pipenv -t europe-west2-docker.pkg.dev/ons-ci-rm/docker/python-pipenv:3.12
 
