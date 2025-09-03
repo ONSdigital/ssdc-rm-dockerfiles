@@ -10,6 +10,10 @@ jobs:
   test-image-builds:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
     steps:
 
     - name: Login to Docker Hub
