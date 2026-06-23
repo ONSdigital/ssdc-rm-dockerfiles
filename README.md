@@ -2,6 +2,13 @@
 
 This repo is where the rm team store their docker image files used in builds and tooling.
 
+Podman and Docker are both supported for building and running the application.
+By default the Makefile will use `docker` unless you are on an `arm64` architecture (e.g. M1/M2 Mac) in which case it will use `podman`.
+You can override this by setting the `DOCKER` environment variable to either `docker` or `podman`.
+For example, to force using `docker` on an M1/M2 Mac:
+```shell
+DOCKER=docker make <command>
+```
 ## [JDK 17 Maven Node 22](/jdk17-maven-node22)
 
 A tooling image with JDK, Maven, and Node version 22, to enable the building of JS front end resources in Java backend services.
