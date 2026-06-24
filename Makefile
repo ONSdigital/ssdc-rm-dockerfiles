@@ -16,13 +16,13 @@ modsecurity:
 	$(DOCKER) build --platform linux/amd64 ./modsecurity -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/modsecurity:latest
 
 cloud-sdk-firebase-cli:
-	$(DOCKER) build --platform linux/amd64 ./cloud-sdk-firebase-cli --platform linux/amd64 -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloud-sdk-firebase-cli:latest
+	$(DOCKER) build --platform linux/amd64 ./cloud-sdk-firebase-cli -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloud-sdk-firebase-cli:latest
 
 tinyproxy:
-	$(DOCKER) build --platform linux/amd64 ./tinyproxy --platform linux/amd64 -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/tinyproxy:latest
+	$(DOCKER) build --platform linux/amd64 ./tinyproxy -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/tinyproxy:latest
 
 cloudsql-proxy:
-	$(DOCKER) build --platform linux/amd64 ./cloudsql-proxy --platform linux/amd64 -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloudsql-proxy:latest
+	$(DOCKER) build --platform linux/amd64 ./cloudsql-proxy -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/cloudsql-proxy:latest
 
 python-pipenv: python-pipenv-3.12
 
