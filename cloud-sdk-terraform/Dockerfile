@@ -6,11 +6,11 @@ ARG TERRAFORM_INITIAL_VERSION="1.7.2"
 RUN apt-get update && \
     apt-get install google-cloud-cli-gke-gcloud-auth-plugin &&  `# GKE plugin needed for authentication` \
     apt-get install kubectl &&                                  `# kubectl` \
-    apt-get install -y unzip &&                                 `# Tfenv depends on unzip` \
+    apt-get install -y unzip gpgv &&                             `# Tfenv depends on unzip; gpgv for signature verification` \
     rm -rf /var/lib/apt/lists/*                                 `# Remove package files to reduce image size bloat`
 
 # Install tfenv from the github release tarball
-# Configure tfenv to use gpgv (which is included in the cloud-sdk) for verification
+# Configure tfenv to use gpgv for verification
 # "trust-tfenv: yes" means tfenv will use its own packaged key for verification
 RUN curl -L "https://github.com/tfutils/tfenv/archive/refs/tags/$TFENV_VERSION.tar.gz" -o "/home/cloudsdk/tfenv.tar.gz" && \
     mkdir "/home/cloudsdk/.tfenv" && \
