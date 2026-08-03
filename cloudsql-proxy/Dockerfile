@@ -1,4 +1,4 @@
-FROM eu.gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.14.0-alpine
+FROM eu.gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.24.1-alpine
 EXPOSE 5432
 USER root
 RUN addgroup --gid 1000 cloudsqlproxy && adduser --system --uid 1000 cloudsqlproxy cloudsqlproxy
