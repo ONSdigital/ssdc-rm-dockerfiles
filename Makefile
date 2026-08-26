@@ -1,10 +1,13 @@
 # Set the container runtime based on architecture, default to docker for amd64 and podman for arm64
 DOCKER ?= $(shell if [ "$$(uname -m)" = "arm64" ]; then echo podman; else echo docker; fi)
 
-.PHONY: jdk17-maven-node22 gcloud-firestore-emulator gcloud-pubsub-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy python-pipenv cloud-sdk-terraform eq-stub owasp-venom
+.PHONY: jdk17-maven-node22 jdk21-maven-node22 gcloud-firestore-emulator gcloud-pubsub-emulator modsecurity cloud-sdk-firebase-cli tinyproxy cloudsql-proxy python-pipenv cloud-sdk-terraform eq-stub owasp-venom
 
 jdk17-maven-node22:
 	$(DOCKER) build --platform linux/amd64 ./jdk17-maven-node22 -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/jdk17-mvn-node22-npm:latest
+
+jdk21-maven-node22:
+	$(DOCKER) build --platform linux/amd64 ./jdk21-maven-node22 -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/jdk21-mvn-node22-npm:latest
 
 gcloud-pubsub-emulator:
 	$(DOCKER) build --platform linux/amd64 ./gcloud-pubsub-emulator -t europe-west2-docker.pkg.dev/ssdc-rm-ci/docker/gcloud-pubsub-emulator:latest
